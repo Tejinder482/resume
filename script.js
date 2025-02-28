@@ -64,71 +64,103 @@ particlesJS('particles-js',
   }
 );
 
-// Projects Data
+// Projects Data with generic descriptions
 const projects = [
     {
-        title: "Aurum Medical",
-        description: "Advanced medical appointment booking system with real-time scheduling and patient management.",
+        title: "Healthcare Management System",
+        description: "Developed a comprehensive healthcare platform enabling efficient appointment scheduling and patient management.",
         technologies: ["Python", "Django", "PostgreSQL", "REST API", "JWT"],
-        image: "aurum.jpg",
+        image: "healthcare.jpg",
         category: "Healthcare",
-        highlights: ["Real-time appointment scheduling", "Patient management system", "Digital health records"]
+        highlights: [
+            "Real-time scheduling system",
+            "Secure patient data management",
+            "Automated notification system"
+        ]
     },
     {
-        title: "Nailsent Auction Platform",
-        description: "Sophisticated auction platform with integrated payment systems and social authentication.",
+        title: "E-commerce Auction Platform",
+        description: "Built a sophisticated auction system with advanced payment processing and user authentication.",
         technologies: ["Python", "Django", "Stripe", "OAuth", "WebSocket"],
-        image: "nailsent.jpg",
+        image: "auction.jpg",
         category: "E-commerce",
-        highlights: ["Split payment system", "Real-time bidding", "Social media authentication"]
+        highlights: [
+            "Multi-payment gateway integration",
+            "Real-time bidding system",
+            "Social authentication"
+        ]
     },
     {
-        title: "FRCR E-Learning",
-        description: "Comprehensive educational platform for medical professionals with interactive quizzes.",
+        title: "E-Learning Management System",
+        description: "Created an interactive learning platform with course management and assessment capabilities.",
         technologies: ["Python", "Django", "React", "PostgreSQL"],
-        image: "frcr.jpg",
+        image: "education.jpg",
         category: "Education",
-        highlights: ["Course management", "Interactive quizzes", "Progress tracking"]
+        highlights: [
+            "Interactive course delivery",
+            "Assessment system",
+            "Progress tracking"
+        ]
     },
     {
-        title: "RepSync Fitness",
-        description: "Advanced gym workout tracking and management application.",
+        title: "Fitness Tracking Application",
+        description: "Developed a mobile-first fitness application for workout tracking and progress monitoring.",
         technologies: ["Python", "FastAPI", "React Native", "MongoDB"],
-        image: "repsync.jpg",
+        image: "fitness.jpg",
         category: "Health & Fitness",
-        highlights: ["Workout tracking", "Progress analytics", "Custom routine builder"]
+        highlights: [
+            "Custom workout plans",
+            "Progress analytics",
+            "Mobile-responsive design"
+        ]
     },
     {
-        title: "Gusto Wine Platform",
-        description: "Multi-vendor wine selling platform with comprehensive API architecture.",
+        title: "Multi-vendor E-commerce Platform",
+        description: "Architected a scalable multi-vendor platform with comprehensive API infrastructure.",
         technologies: ["Python", "Django", "REST API", "Redis"],
-        image: "gusto.jpg",
+        image: "ecommerce.jpg",
         category: "E-commerce",
-        highlights: ["Multi-vendor system", "Inventory management", "Order tracking"]
+        highlights: [
+            "Vendor management system",
+            "Inventory tracking",
+            "Order processing"
+        ]
     },
     {
-        title: "EyeMo Tutorial Platform",
-        description: "Interactive eye treatment tutorial application with video content.",
+        title: "Medical Training Platform",
+        description: "Built an educational platform focused on medical training with video content delivery.",
         technologies: ["Python", "Django", "React", "AWS"],
-        image: "eyemo.jpg",
+        image: "medical-edu.jpg",
         category: "Healthcare",
-        highlights: ["Video tutorials", "Progress tracking", "Interactive exercises"]
+        highlights: [
+            "Video content management",
+            "Interactive learning modules",
+            "User progress tracking"
+        ]
     },
     {
-        title: "Face Detection AI",
-        description: "Advanced face detection system using machine learning.",
+        title: "AI-Powered Face Detection System",
+        description: "Implemented an advanced face detection system using machine learning algorithms.",
         technologies: ["Python", "OpenCV", "TensorFlow", "Deep Learning"],
-        image: "face.jpg",
+        image: "ai-face.jpg",
         category: "AI/ML",
-        highlights: ["Real-time detection", "Multiple face tracking", "Emotion recognition"]
+        highlights: [
+            "Real-time detection",
+            "Multi-face tracking",
+            "Emotion recognition"
+        ]
     },
     {
-        title: "Predictive Analytics Model",
-        description: "Machine learning model for data prediction and analysis.",
+        title: "Predictive Analytics Solution",
+        description: "Developed a machine learning model for data prediction and pattern recognition.",
         technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-        image: "predict.jpg",
+        image: "analytics.jpg",
         category: "AI/ML",
-        highlights: ["Data preprocessing", "Model training", "Prediction analytics"]
+        highlights: [
+            "Data preprocessing",
+            "Model training",
+            "Predictive analytics"
+        ]
     }
 ];
 
