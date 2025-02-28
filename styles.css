@@ -134,10 +134,28 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-category:hover {
     transform: translateY(-5px);
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(37, 99, 235, 0.1));
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.skill-category:hover::before {
+    transform: translateX(0);
 }
 
 .skill-category h3 {
@@ -164,11 +182,48 @@ body {
     padding: 2rem 0;
 }
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--accent-color);
+}
+
 .timeline-item {
     padding: 2rem;
     background: var(--card-bg);
     border-radius: 1rem;
     margin: 2rem 0;
+    width: 50%;
+    margin-left: 50%;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 0;
+    padding-right: 2rem;
+    padding-left: 0;
+    text-align: right;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: auto;
+    right: -8px;
 }
 
 /* Projects Grid */
@@ -192,19 +247,91 @@ body {
     margin: 0 auto;
 }
 
+/* Contact Form Styles */
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    position: relative;
 }
 
 #contact-form input,
 #contact-form textarea {
+    width: 100%;
     padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 0.5rem;
     background: var(--card-bg);
-    border: 1px solid var(--accent-color);
     color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#contact-form button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.button-loader {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 500;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1000;
+}
+
+.toast.success {
+    background: #10B981;
+}
+
+.toast.error {
+    background: #EF4444;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .contact-info {
@@ -418,4 +545,133 @@ body {
     background: var(--primary-color);
     color: white;
     cursor: pointer;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero, .about, .skills, .experience, .projects, .contact {
+    position: relative;
+    z-index: 2;
+}
+
+/* Add these new style enhancements */
+.project-card {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-tech span {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.3rem;
+    background: var(--primary-color);
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.project-tech span:hover {
+    transform: scale(1.1);
+}
+
+/* Add animated progress bars for skills */
+.skill-progress {
+    margin: 1rem 0;
+}
+
+.skill-progress-bar {
+    height: 6px;
+    background: var(--background-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: var(--accent-color);
+    transform-origin: left;
+    animation: fillProgress 1.5s ease-out forwards;
+}
+
+@keyframes fillProgress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Enhanced timeline styling */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--accent-color);
+}
+
+.timeline-item {
+    width: 50%;
+    margin-left: 50%;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 0;
+    padding-right: 2rem;
+    padding-left: 0;
+    text-align: right;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: auto;
+    right: -8px;
 } 
