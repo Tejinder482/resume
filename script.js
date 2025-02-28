@@ -64,13 +64,13 @@ particlesJS('particles-js',
   }
 );
 
-// Projects Data with generic descriptions
+// Projects Data with generic descriptions and real image URLs
 const projects = [
     {
         title: "Healthcare Management System",
         description: "Developed a comprehensive healthcare platform enabling efficient appointment scheduling and patient management.",
         technologies: ["Python", "Django", "PostgreSQL", "REST API", "JWT"],
-        image: "healthcare.jpg",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format",
         category: "Healthcare",
         highlights: [
             "Real-time scheduling system",
@@ -82,7 +82,7 @@ const projects = [
         title: "E-commerce Auction Platform",
         description: "Built a sophisticated auction system with advanced payment processing and user authentication.",
         technologies: ["Python", "Django", "Stripe", "OAuth", "WebSocket"],
-        image: "auction.jpg",
+        image: "https://images.unsplash.com/photo-1628527304948-06157ee3c8a6?w=800&auto=format",
         category: "E-commerce",
         highlights: [
             "Multi-payment gateway integration",
@@ -94,7 +94,7 @@ const projects = [
         title: "E-Learning Management System",
         description: "Created an interactive learning platform with course management and assessment capabilities.",
         technologies: ["Python", "Django", "React", "PostgreSQL"],
-        image: "education.jpg",
+        image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&auto=format",
         category: "Education",
         highlights: [
             "Interactive course delivery",
@@ -106,7 +106,7 @@ const projects = [
         title: "Fitness Tracking Application",
         description: "Developed a mobile-first fitness application for workout tracking and progress monitoring.",
         technologies: ["Python", "FastAPI", "React Native", "MongoDB"],
-        image: "fitness.jpg",
+        image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format",
         category: "Health & Fitness",
         highlights: [
             "Custom workout plans",
@@ -118,7 +118,7 @@ const projects = [
         title: "Multi-vendor E-commerce Platform",
         description: "Architected a scalable multi-vendor platform with comprehensive API infrastructure.",
         technologies: ["Python", "Django", "REST API", "Redis"],
-        image: "ecommerce.jpg",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format",
         category: "E-commerce",
         highlights: [
             "Vendor management system",
@@ -130,7 +130,7 @@ const projects = [
         title: "Medical Training Platform",
         description: "Built an educational platform focused on medical training with video content delivery.",
         technologies: ["Python", "Django", "React", "AWS"],
-        image: "medical-edu.jpg",
+        image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&auto=format",
         category: "Healthcare",
         highlights: [
             "Video content management",
@@ -142,7 +142,7 @@ const projects = [
         title: "AI-Powered Face Detection System",
         description: "Implemented an advanced face detection system using machine learning algorithms.",
         technologies: ["Python", "OpenCV", "TensorFlow", "Deep Learning"],
-        image: "ai-face.jpg",
+        image: "https://images.unsplash.com/photo-1555952494-efd681c7e3f9?w=800&auto=format",
         category: "AI/ML",
         highlights: [
             "Real-time detection",
@@ -154,7 +154,7 @@ const projects = [
         title: "Predictive Analytics Solution",
         description: "Developed a machine learning model for data prediction and pattern recognition.",
         technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-        image: "analytics.jpg",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format",
         category: "AI/ML",
         highlights: [
             "Data preprocessing",
@@ -407,7 +407,229 @@ styles.textContent = `
         z-index: 1001;
         transition: width 0.2s;
     }
+
+    .timeline {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        position: relative;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: calc(100% - 100px);
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--accent-color),
+            var(--accent-color),
+            transparent
+        );
+        top: 50px;
+    }
+
+    .timeline-item {
+        width: calc(50% - 30px);
+        margin: 30px 0;
+        position: relative;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInUp 0.5s forwards;
+    }
+
+    .timeline-item:nth-child(odd) {
+        margin-left: auto;
+        padding-left: 50px;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-right: auto;
+        padding-right: 50px;
+        text-align: right;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item:nth-child(odd)::before {
+        left: -8px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+        right: -8px;
+    }
+
+    .timeline-content {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(56, 189, 248, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+    }
+
+    .timeline-content h3 {
+        color: var(--accent-color);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h4 {
+        color: var(--text-color);
+        opacity: 0.8;
+        margin-bottom: 5px;
+    }
+
+    .timeline-content .date {
+        color: var(--accent-color);
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .timeline-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .timeline-content li {
+        margin: 8px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .timeline-content li::before {
+        content: "→";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Add glowing dots for timeline markers */
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgba(56, 189, 248, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        animation: pulse 2s infinite;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+        left: -10px;
+    }
+
+    .timeline-item:nth-child(even)::after {
+        right: -10px;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translateY(-50%) scale(1);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translateY(-50%) scale(1.5);
+            opacity: 0.2;
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+            opacity: 0.5;
+        }
+    }
+
+    /* Enhanced project card styles */
+    .project-card {
+        transform: perspective(1000px) rotateY(0deg);
+        transition: transform 0.5s;
+    }
+
+    .project-card:hover {
+        transform: perspective(1000px) rotateY(5deg);
+    }
+
+    .project-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            45deg,
+            rgba(56, 189, 248, 0.2),
+            transparent
+        );
+        pointer-events: none;
+    }
+
+    /* Add floating animation to project cards */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .project-card {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    /* Staggered animation for project cards */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .project-card {
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .project-card:nth-child(1) { animation-delay: 0.1s; }
+    .project-card:nth-child(2) { animation-delay: 0.2s; }
+    .project-card:nth-child(3) { animation-delay: 0.3s; }
+    .project-card:nth-child(4) { animation-delay: 0.4s; }
+    .project-card:nth-child(5) { animation-delay: 0.5s; }
+    .project-card:nth-child(6) { animation-delay: 0.6s; }
+    .project-card:nth-child(7) { animation-delay: 0.7s; }
+    .project-card:nth-child(8) { animation-delay: 0.8s; }
 `;
+
 document.head.appendChild(styles);
 
 // Update project card creation with new futuristic design
@@ -420,7 +642,7 @@ function createProjectCard(project) {
     card.innerHTML = `
         <div class="project-card-inner">
             <div class="project-image">
-                <img src="images/${project.image}" alt="${project.title}">
+                <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
                     <span class="project-category">${project.category}</span>
                 </div>

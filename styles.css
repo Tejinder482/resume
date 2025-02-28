@@ -236,15 +236,52 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 5rem 5%;
+    padding: 8rem 5%;
+    background: linear-gradient(to bottom, var(--background-color), var(--card-bg));
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-info {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
 }
 
 /* Contact Form Styles */
@@ -332,27 +369,6 @@ body {
 .toast.show {
     transform: translateY(0);
     opacity: 1;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.5rem;
-}
-
-.social-links a {
-    color: var(--accent-color);
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
 }
 
 /* Responsive Design */
