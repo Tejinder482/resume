@@ -64,102 +64,110 @@ particlesJS('particles-js',
   }
 );
 
-// Projects Data with generic descriptions and real image URLs
+// Projects Data - Real projects
 const projects = [
     {
-        title: "Healthcare Management System",
-        description: "Developed a comprehensive healthcare platform enabling efficient appointment scheduling and patient management.",
-        technologies: ["Python", "Django", "PostgreSQL", "REST API", "JWT"],
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format",
-        category: "Healthcare",
-        highlights: [
-            "Real-time scheduling system",
-            "Secure patient data management",
-            "Automated notification system"
-        ]
-    },
-    {
-        title: "E-commerce Auction Platform",
-        description: "Built a sophisticated auction system with advanced payment processing and user authentication.",
-        technologies: ["Python", "Django", "Stripe", "OAuth", "WebSocket"],
+        title: "Auction Platform",
+        description: "Developed a real-time auction platform where users can post products for bidding. Other users can place bids, and the highest bidder wins. Integrated Stripe for secure payment processing.",
+        technologies: ["Python", "Django", "Stripe", "PostgreSQL", "Redis", "WebSockets"],
         image: "https://images.unsplash.com/photo-1628527304948-06157ee3c8a6?w=800&auto=format",
         category: "E-commerce",
         highlights: [
-            "Multi-payment gateway integration",
             "Real-time bidding system",
-            "Social authentication"
+            "Product posting and management",
+            "Stripe payment integration",
+            "Highest bidder wins automatically"
         ]
     },
     {
-        title: "E-Learning Management System",
-        description: "Created an interactive learning platform with course management and assessment capabilities.",
-        technologies: ["Python", "Django", "React", "PostgreSQL"],
+        title: "FRCR Quiz Management System",
+        description: "Built a comprehensive quiz management platform specifically designed for FRCR exam preparation. Features include practice tests, progress tracking, and detailed analytics.",
+        technologies: ["Python", "Django", "PostgreSQL", "REST API"],
         image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&auto=format",
         category: "Education",
         highlights: [
-            "Interactive course delivery",
-            "Assessment system",
-            "Progress tracking"
+            "FRCR exam preparation focused",
+            "Quiz management system",
+            "Progress tracking",
+            "Performance analytics"
         ]
     },
     {
-        title: "Fitness Tracking Application",
-        description: "Developed a mobile-first fitness application for workout tracking and progress monitoring.",
-        technologies: ["Python", "FastAPI", "React Native", "MongoDB"],
-        image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format",
-        category: "Health & Fitness",
+        title: "Appointment Booking System",
+        description: "Created an appointment booking system where users can easily book appointments with service providers. Features include calendar integration, scheduling, and notification system.",
+        technologies: ["Python", "Django", "PostgreSQL", "REST API"],
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format",
+        category: "Healthcare",
         highlights: [
-            "Custom workout plans",
-            "Progress analytics",
-            "Mobile-responsive design"
+            "User-friendly booking interface",
+            "Calendar integration",
+            "Real-time availability",
+            "Automated notifications"
         ]
     },
     {
-        title: "Multi-vendor E-commerce Platform",
-        description: "Architected a scalable multi-vendor platform with comprehensive API infrastructure.",
-        technologies: ["Python", "Django", "REST API", "Redis"],
+        title: "E-commerce Platform",
+        description: "Developed a full-featured e-commerce platform with product catalog, shopping cart, order management, and payment processing capabilities.",
+        technologies: ["Python", "Django", "PostgreSQL", "Stripe", "REST API"],
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format",
         category: "E-commerce",
         highlights: [
-            "Vendor management system",
-            "Inventory tracking",
-            "Order processing"
+            "Product catalog management",
+            "Shopping cart functionality",
+            "Order processing system",
+            "Payment gateway integration"
         ]
     },
     {
-        title: "Medical Training Platform",
-        description: "Built an educational platform focused on medical training with video content delivery.",
-        technologies: ["Python", "Django", "React", "AWS"],
-        image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&auto=format",
-        category: "Healthcare",
+        title: "Fitness and Health App",
+        description: "Built a comprehensive fitness and health management application with workout tracking, nutrition planning, progress monitoring, and health analytics.",
+        technologies: ["Python", "FastAPI", "PostgreSQL", "REST API"],
+        image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format",
+        category: "Health & Fitness",
         highlights: [
-            "Video content management",
-            "Interactive learning modules",
-            "User progress tracking"
+            "Workout tracking",
+            "Nutrition planning",
+            "Progress monitoring",
+            "Health analytics dashboard"
         ]
     },
     {
-        title: "AI-Powered Face Detection System",
-        description: "Implemented an advanced face detection system using machine learning algorithms.",
-        technologies: ["Python", "OpenCV", "TensorFlow", "Deep Learning"],
-        image: "https://images.unsplash.com/photo-1555952494-efd681c7e3f9?w=800&auto=format",
+        title: "Delivery Management App",
+        description: "Developed a delivery management application with real-time tracking, order management, delivery assignment, and status updates for efficient logistics operations.",
+        technologies: ["Python", "Django", "PostgreSQL", "WebSockets", "REST API"],
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format",
+        category: "E-commerce",
+        highlights: [
+            "Real-time order tracking",
+            "Delivery assignment system",
+            "Status updates",
+            "Route optimization"
+        ]
+    },
+    {
+        title: "AI Car Booking Agent",
+        description: "Developed an intelligent AI agent for car booking system that handles conversational interactions, understands user requirements, and automates the booking process. Part of the AI Agent Team project.",
+        technologies: ["Python", "FastAPI", "AI/ML", "LLM Integration", "Conversational AI"],
+        image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format",
         category: "AI/ML",
         highlights: [
-            "Real-time detection",
-            "Multi-face tracking",
-            "Emotion recognition"
+            "Conversational AI agent",
+            "Automated booking workflow",
+            "Natural language understanding",
+            "API endpoint integration"
         ]
     },
     {
-        title: "Predictive Analytics Solution",
-        description: "Developed a machine learning model for data prediction and pattern recognition.",
-        technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format",
+        title: "Wine Recommendation System",
+        description: "Built an AI-powered wine recommendation system using custom NER (Named Entity Recognition) models and ChatGPT integration. Provides intelligent wine suggestions based on user preferences and queries.",
+        technologies: ["Python", "FastAPI", "ML NER Models", "ChatGPT", "LLM Integration"],
+        image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format",
         category: "AI/ML",
         highlights: [
-            "Data preprocessing",
-            "Model training",
-            "Predictive analytics"
+            "Custom NER model integration",
+            "ChatGPT-powered recommendations",
+            "Intelligent information retrieval",
+            "Natural language processing"
         ]
     }
 ];
@@ -167,10 +175,13 @@ const projects = [
 // Populate Projects
 const projectsGrid = document.querySelector('.projects-grid');
 
-projects.forEach(project => {
-    const projectCard = createProjectCard(project);
-    projectsGrid.appendChild(projectCard);
-});
+if (projectsGrid) {
+    projects.forEach((project, index) => {
+        const projectCard = createProjectCard(project);
+        projectCard.style.animationDelay = `${index * 0.1}s`;
+        projectsGrid.appendChild(projectCard);
+    });
+}
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -188,7 +199,20 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbar')) {
+        navLinks.classList.remove('active');
+    }
 });
 
 // Initialize EmailJS
@@ -281,10 +305,10 @@ const sendMessage = document.getElementById('send-message');
 
 // Chatbot responses based on keywords
 const chatbotResponses = {
-    skills: "Tejinder is skilled in Python, Django, FastAPI, AI/ML, and web development. He has experience with various technologies including Stripe, OpenAI, and Google Gemini.",
-    experience: "Tejinder has been working as a Python Developer at Kontinuum Kode since March 2023. Before that, he worked as a Business Analyst at Live Deft Soft.",
-    projects: "Tejinder has successfully delivered 10 projects, including e-commerce platforms, AI chat applications, and data scraping tools.",
-    education: "Tejinder completed his B.Tech from PTU, 12th from Jet HR Secondary, and 10th from Bugging Bloom.",
+    skills: "Tejinder is skilled in Python, Django, DRF, FastAPI, PostgreSQL, Redis, Celery, Docker, and AI/ML. He has experience with NER models, LLM integration, and various backend technologies.",
+    experience: "Tejinder is currently working as a Python Developer (AI Agent Team) at Admin Webworld since July 2025. Previously, he worked as Python Backend Developer at Kontinuum Kode from March 2023 to June 2025, and as Business Analyst at Live Deftsoft from June 2021 to February 2023.",
+    projects: "Tejinder has successfully delivered 10+ projects including: Auction Platform with Stripe integration, FRCR Quiz Management System, Appointment Booking System, E-commerce Platform, Fitness and Health App, Delivery Management App, AI Car Booking Agent, and Wine Recommendation System with NER models and ChatGPT integration.",
+    education: "Tejinder completed his B.Tech in Computer Science from Shaheed Udham Singh College, Punjab in July 2021. He completed Higher Secondary Education from JET Higher Secondary School, Baramulla in November 2015, and Secondary Education from Budding Bloom Exceptional School, Baramulla in November 2013.",
     contact: "You can contact Tejinder through the contact form on this website or via his social media profiles.",
     default: "I can tell you about Tejinder's skills, experience, projects, education, or how to contact him. What would you like to know?"
 };
@@ -337,22 +361,38 @@ userInput.addEventListener('keypress', (e) => {
     }
 });
 
-// Add typing effect to hero section
-const heroText = document.querySelector('.hero h1');
-const text = heroText.textContent;
-heroText.textContent = '';
-let i = 0;
+// Add typing effect to hero subtitle
+const typingText = document.querySelector('.typing-text');
+if (typingText) {
+    const texts = ['Python Backend Developer', 'AI/ML Expert', 'Business Analyst'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-function typeWriter() {
-    if (i < text.length) {
-        heroText.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100);
+    function typeWriter() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingText.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+            setTimeout(() => isDeleting = true, 2000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
+
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeWriter, speed);
     }
-}
 
-// Start typing effect when page loads
-window.addEventListener('load', typeWriter);
+    typeWriter();
+}
 
 // Add skill progress bars
 const skillCategories = document.querySelectorAll('.skill-category');
@@ -669,8 +709,8 @@ function createProjectCard(project) {
 const categories = ['All', 'Healthcare', 'E-commerce', 'Education', 'Health & Fitness', 'AI/ML'];
 
 function createCategoryFilters() {
-    const filterContainer = document.createElement('div');
-    filterContainer.className = 'project-filters';
+    const filterContainer = document.getElementById('project-filters');
+    if (!filterContainer) return;
     
     categories.forEach(category => {
         const button = document.createElement('button');
@@ -679,9 +719,10 @@ function createCategoryFilters() {
         button.addEventListener('click', () => filterProjects(category));
         filterContainer.appendChild(button);
     });
-    
-    return filterContainer;
 }
+
+// Initialize filters when projects are loaded
+createCategoryFilters();
 
 function filterProjects(category) {
     const projectCards = document.querySelectorAll('.project-card');
@@ -691,13 +732,41 @@ function filterProjects(category) {
         btn.classList.toggle('active', btn.textContent === category);
     });
     
-    projectCards.forEach(card => {
-        if (category === 'All' || card.getAttribute('data-category') === category) {
+    projectCards.forEach((card, index) => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'All' || cardCategory === category) {
             card.style.display = 'block';
-            setTimeout(() => card.style.opacity = '1', 0);
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 50);
         } else {
             card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
             setTimeout(() => card.style.display = 'none', 300);
         }
     });
-} 
+}
+
+// Add scroll reveal animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all animated elements
+document.querySelectorAll('[data-aos]').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+}); 
